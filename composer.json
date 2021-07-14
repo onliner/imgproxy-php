@@ -1,0 +1,24 @@
+{
+    "name": "onliner/imgproxy-php",
+    "type": "library",
+    "description": "ImgProxy url builder for PHP",
+    "keywords": ["imgproxy", "imageproxy", "image", "resize"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.8|^9.3.3",
+        "phpstan/phpstan": "^0.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onliner\\ImgProxy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Onliner\\ImgProxy\\": "tests/"
+        }
+    }
+}
