@@ -9,7 +9,7 @@ use InvalidArgumentException;
 class ImageFormat
 {
     private const SUPPORTED = [
-        'png', 'jpg', 'webp', 'avif', 'gif', 'ico',
+        'png', 'jpg', 'jpeg', 'webp', 'avif', 'gif', 'ico',
         'svg', 'heic', 'bmp', 'tiff', 'pdf', 'mp4',
     ];
 
