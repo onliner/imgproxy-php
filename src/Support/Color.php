@@ -8,14 +8,8 @@ use InvalidArgumentException;
 
 class Color
 {
-    /**
-     * @var string
-     */
-    private $color;
+    private string $color;
 
-    /**
-     * @param string $color
-     */
     public function __construct(string $color)
     {
         if (!$this->isValidHexColor($color) && !$this->isValidRgbColor($color)) {

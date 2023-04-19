@@ -8,10 +8,7 @@ use InvalidArgumentException;
 
 final class Width extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $width;
+    private int $width;
 
     public function __construct(int $width)
     {

@@ -9,22 +9,10 @@ use Onliner\ImgProxy\Support\Color;
 
 final class Trim extends AbstractOption
 {
-    /**
-     * @var float
-     */
-    private $threshold;
-    /**
-     * @var Color|null
-     */
-    private $color;
-    /**
-     * @var bool|null
-     */
-    private $equalHor;
-    /**
-     * @var bool|null
-     */
-    private $equalVer;
+    private float $threshold;
+    private ?Color $color = null;
+    private ?bool $equalHor;
+    private ?bool $equalVer;
 
     public function __construct(float $threshold, string $color = null, bool $equalHor = null, bool $equalVer = null)
     {

@@ -24,10 +24,7 @@ final class ResizingType extends AbstractOption
         self::AUTO,
     ];
 
-    /**
-     * @var string
-     */
-    private $type;
+    private string $type;
 
     public function __construct(string $type)
     {

@@ -8,22 +8,10 @@ use InvalidArgumentException;
 
 final class Padding extends AbstractOption
 {
-    /**
-     * @var int|null
-     */
-    private $top;
-    /**
-     * @var int|null
-     */
-    private $right;
-    /**
-     * @var int|null
-     */
-    private $bottom;
-    /**
-     * @var int|null
-     */
-    private $left;
+    private ?int $top;
+    private ?int $right;
+    private ?int $bottom;
+    private ?int $left;
 
     public function __construct(int $top = null, int $right = null, int $bottom = null, int $left = null)
     {

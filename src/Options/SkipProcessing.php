@@ -11,7 +11,7 @@ final class SkipProcessing extends AbstractOption
     /**
      * @var string[]
      */
-    private $extensions;
+    private array $extensions;
 
     public function __construct(string ... $extensions)
     {

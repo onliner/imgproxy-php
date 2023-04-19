@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class Expires extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $timestamp;
+    private int $timestamp;
 
     public function __construct(int $timestamp)
     {

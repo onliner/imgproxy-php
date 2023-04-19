@@ -8,10 +8,7 @@ use InvalidArgumentException;
 
 final class Rotate extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $angle;
+    private int $angle;
 
     public function __construct(int $angle)
     {

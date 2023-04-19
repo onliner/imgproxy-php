@@ -9,7 +9,7 @@ final class FormatQuality extends AbstractOption
     /**
      * @var array[]
      */
-    private $options = [];
+    private array $options = [];
 
     /**
      * @param array<string, int> $options

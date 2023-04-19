@@ -8,10 +8,7 @@ use Onliner\ImgProxy\Support\Color;
 
 final class Background extends AbstractOption
 {
-    /**
-     * @var Color
-     */
-    private $color;
+    private Color $color;
 
     public function __construct(string $color)
     {

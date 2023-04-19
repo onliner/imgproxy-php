@@ -11,7 +11,7 @@ final class Preset extends AbstractOption
     /**
      * @var string[]
      */
-    private $presets = [];
+    private array $presets;
 
     public function __construct(string ...$presets)
     {

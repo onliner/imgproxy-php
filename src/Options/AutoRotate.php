@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class AutoRotate extends AbstractOption
 {
-    /**
-     * @var bool
-     */
-    private $rotate;
+    private bool $rotate;
 
     public function __construct(bool $rotate = true)
     {

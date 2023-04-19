@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class Raw extends AbstractOption
 {
-    /**
-     * @var bool
-     */
-    private $raw;
+    private bool $raw;
 
     public function __construct(bool $raw = true)
     {

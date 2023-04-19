@@ -9,18 +9,9 @@ use Onliner\ImgProxy\Support\GravityType;
 
 final class Gravity extends AbstractOption
 {
-    /**
-     * @var GravityType
-     */
-    private $type;
-    /**
-     * @var float|null
-     */
-    private $x;
-    /**
-     * @var float|null
-     */
-    private $y;
+    private GravityType $type;
+    private ?float $x;
+    private ?float $y;
 
     /**
      * @param string $type

@@ -13,10 +13,7 @@ class ImageFormat
         'svg', 'heic', 'bmp', 'tiff', 'pdf', 'mp4',
     ];
 
-    /**
-     * @var string
-     */
-    private $extension;
+    private string $extension;
 
     /**
      * @param string $extension

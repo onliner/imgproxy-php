@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class KeepCopyright extends AbstractOption
 {
-    /**
-     * @var bool
-     */
-    private $keep;
+    private bool $keep;
 
     public function __construct(bool $keep = true)
     {

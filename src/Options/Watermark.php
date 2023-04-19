@@ -11,26 +11,11 @@ final class Watermark extends AbstractOption
 {
     private const REPLICATE_POSITION = 're';
 
-    /**
-     * @var float
-     */
-    private $opacity;
-    /**
-     * @var string|null
-     */
-    private $position;
-    /**
-     * @var int|null
-     */
-    private $x;
-    /**
-     * @var int|null
-     */
-    private $y;
-    /**
-     * @var float|null
-     */
-    private $scale;
+    private float $opacity;
+    private ?string $position;
+    private ?int $x;
+    private ?int $y;
+    private ?float $scale;
 
     public function __construct(
         float $opacity,

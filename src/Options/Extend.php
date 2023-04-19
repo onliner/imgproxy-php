@@ -6,14 +6,8 @@ namespace Onliner\ImgProxy\Options;
 
 final class Extend extends AbstractOption
 {
-    /**
-     * @var bool
-     */
-    private $extend;
-    /**
-     * @var Gravity|null $gravity
-     */
-    private $gravity;
+    private bool $extend;
+    private ?Gravity $gravity = null;
 
     public function __construct(bool $extend = true, string $gravity = null)
     {

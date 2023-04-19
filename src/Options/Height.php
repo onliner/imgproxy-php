@@ -8,10 +8,7 @@ use InvalidArgumentException;
 
 final class Height extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $height;
+    private int $height;
 
     public function __construct(int $height)
     {

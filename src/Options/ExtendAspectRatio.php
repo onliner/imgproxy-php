@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class ExtendAspectRatio extends AbstractOption
 {
-    /**
-     * @var Extend
-     */
-    private $extend;
+    private Extend $extend;
 
     public function __construct(bool $extend = true, string $gravity = null)
     {

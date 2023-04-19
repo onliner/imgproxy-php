@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class Enlarge extends AbstractOption
 {
-    /**
-     * @var bool
-     */
-    private $enlarge;
+    private bool $enlarge;
 
     public function __construct(bool $enlarge = true)
     {

@@ -12,22 +12,13 @@ class UrlBuilder
 {
     private const INSECURE_SIGN = 'insecure';
 
-    /**
-     * @var UrlSigner|null
-     */
-    private $signer;
-    /**
-     * @var bool
-     */
-    private $encoded = true;
-    /**
-     * @var int
-     */
-    private $splitSize = 16;
+    private ?UrlSigner $signer;
+    private bool $encoded = true;
+    private int $splitSize = 16;
     /**
      * @var array<AbstractOption>
      */
-    private $options = [];
+    private array $options = [];
 
     /**
      * @param UrlSigner|null $signer

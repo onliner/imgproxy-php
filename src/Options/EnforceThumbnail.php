@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class EnforceThumbnail extends AbstractOption
 {
-    /**
-     * @var string|null $format
-     */
-    private $format;
+    private ?string $format;
 
     public function __construct(string $format = null)
     {

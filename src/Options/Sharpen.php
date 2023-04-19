@@ -8,10 +8,7 @@ use InvalidArgumentException;
 
 final class Sharpen extends AbstractOption
 {
-    /**
-     * @var float
-     */
-    private $sigma;
+    private float $sigma;
 
     public function __construct(float $sigma)
     {

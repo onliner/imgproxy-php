@@ -8,14 +8,8 @@ use InvalidArgumentException;
 
 final class Zoom extends AbstractOption
 {
-    /**
-     * @var float
-     */
-    private $x;
-    /**
-     * @var float|null
-     */
-    private $y;
+    private float $x;
+    private ?float $y;
 
     public function __construct(float $x, float $y = null)
     {

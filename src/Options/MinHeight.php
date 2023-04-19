@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class MinHeight extends AbstractOption
 {
-    /**
-     * @var Height
-     */
-    private $height;
+    private Height $height;
 
     public function __construct(int $height)
     {

@@ -6,10 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 final class MinWidth extends AbstractOption
 {
-    /**
-     * @var Width
-     */
-    private $width;
+    private Width $width;
 
     public function __construct(int $width)
     {
