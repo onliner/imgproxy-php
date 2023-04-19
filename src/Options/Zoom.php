@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-class Zoom extends Option
+final class Zoom extends Option
 {
     /**
      * @var float
