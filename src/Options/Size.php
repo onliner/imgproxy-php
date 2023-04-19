@@ -13,7 +13,7 @@ final class Size extends AbstractOption
     private ?bool $enlarge;
     private ?bool $extend;
 
-    public function __construct(int $width = null, int $height = null, bool $enlarge = null, bool $extend = null)
+    public function __construct(?int $width = null, ?int $height = null, ?bool $enlarge = null, ?bool $extend = null)
     {
         if (is_null($width ?? $height ?? $enlarge ?? $extend)) {
             throw new InvalidArgumentException('At least one size argument must be set');

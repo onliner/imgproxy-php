@@ -19,10 +19,10 @@ final class Watermark extends AbstractOption
 
     public function __construct(
         float $opacity,
-        string $position = null,
-        int $x = null,
-        int $y = null,
-        float $scale = null
+        ?string $position = null,
+        ?int $x = null,
+        ?int $y = null,
+        ?float $scale = null
     ) {
         if ($opacity < 0 || $opacity > 1) {
             throw new InvalidArgumentException(sprintf('Invalid watermark opacity: %s', $opacity));

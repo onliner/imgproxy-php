@@ -8,7 +8,7 @@ final class EnforceThumbnail extends AbstractOption
 {
     private ?string $format;
 
-    public function __construct(string $format = null)
+    public function __construct(?string $format = null)
     {
         $this->format = $format;
     }

@@ -9,7 +9,7 @@ final class Extend extends AbstractOption
     private bool $extend;
     private ?Gravity $gravity = null;
 
-    public function __construct(bool $extend = true, string $gravity = null)
+    public function __construct(bool $extend = true, ?string $gravity = null)
     {
         $this->extend = $extend;
 

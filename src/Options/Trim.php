@@ -14,7 +14,7 @@ final class Trim extends AbstractOption
     private ?bool $equalHor;
     private ?bool $equalVer;
 
-    public function __construct(float $threshold, string $color = null, bool $equalHor = null, bool $equalVer = null)
+    public function __construct(float $threshold, ?string $color = null, ?bool $equalHor = null, ?bool $equalVer = null)
     {
         if ($threshold < 0) {
             throw new InvalidArgumentException(sprintf('Invalid threshold: %s', $threshold));

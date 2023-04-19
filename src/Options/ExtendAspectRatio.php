@@ -8,7 +8,7 @@ final class ExtendAspectRatio extends AbstractOption
 {
     private Extend $extend;
 
-    public function __construct(bool $extend = true, string $gravity = null)
+    public function __construct(bool $extend = true, ?string $gravity = null)
     {
         $this->extend = new Extend($extend, $gravity);
     }

@@ -11,7 +11,7 @@ final class Zoom extends AbstractOption
     private float $x;
     private ?float $y;
 
-    public function __construct(float $x, float $y = null)
+    public function __construct(float $x, ?float $y = null)
     {
         if ($x <= 0) {
             throw new InvalidArgumentException(sprintf('Invalid zoom X value: %s', $x));

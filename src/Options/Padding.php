@@ -13,7 +13,7 @@ final class Padding extends AbstractOption
     private ?int $bottom;
     private ?int $left;
 
-    public function __construct(int $top = null, int $right = null, int $bottom = null, int $left = null)
+    public function __construct(?int $top = null, ?int $right = null, ?int $bottom = null, ?int $left = null)
     {
         if (is_null($top ?? $right ?? $bottom ?? $left)) {
             throw new InvalidArgumentException('At least one dimension must be set');

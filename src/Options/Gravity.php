@@ -18,7 +18,7 @@ final class Gravity extends AbstractOption
      * @param float|null $x
      * @param float|null $y
      */
-    public function __construct(string $type, float $x = null, float $y = null)
+    public function __construct(string $type, ?float $x = null, ?float $y = null)
     {
         $this->type = new GravityType($type);
 

@@ -11,10 +11,10 @@ final class Resize extends AbstractOption
 
     public function __construct(
         string $type,
-        int $width = null,
-        int $height = null,
-        bool $enlarge = null,
-        bool $extend = null
+        ?int $width = null,
+        ?int $height = null,
+        ?bool $enlarge = null,
+        ?bool $extend = null
     ) {
         $this->type = new ResizingType($type);
 

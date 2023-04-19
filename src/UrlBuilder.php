@@ -23,7 +23,7 @@ class UrlBuilder
     /**
      * @param UrlSigner|null $signer
      */
-    public function __construct(UrlSigner $signer = null)
+    public function __construct(?UrlSigner $signer = null)
     {
         $this->signer = $signer;
     }
@@ -92,7 +92,7 @@ class UrlBuilder
      *
      * @return string
      */
-    public function url(string $src, string $extension = null): string
+    public function url(string $src, ?string $extension = null): string
     {
         $format = $extension ? new ImageFormat($extension) : null;
 
