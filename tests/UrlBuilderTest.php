@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy;
 
+use Onliner\ImgProxy\Options\AbstractOption;
 use Onliner\ImgProxy\Options\Dpr;
 use Onliner\ImgProxy\Options\Height;
-use Onliner\ImgProxy\Options\AbstractOption;
 use Onliner\ImgProxy\Options\Resize;
 use Onliner\ImgProxy\Options\ResizingType;
 use Onliner\ImgProxy\Options\Width;
