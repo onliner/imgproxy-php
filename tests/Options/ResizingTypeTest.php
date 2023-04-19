@@ -36,6 +36,8 @@ class ResizingTypeTest extends TestCase
         return [
             ['fit', 'rt:fit'],
             ['fill', 'rt:fill'],
+            ['fill-down', 'rt:fill-down'],
+            ['force', 'rt:force'],
             ['auto', 'rt:auto'],
         ];
     }

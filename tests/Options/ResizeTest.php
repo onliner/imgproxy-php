@@ -51,13 +51,17 @@ class ResizeTest extends TestCase
     {
         return [
             ['auto', null, null, null, null, 'rs:auto'],
+            ['force', null, null, null, null, 'rs:force'],
             ['fill', null, null, null, null, 'rs:fill'],
+            ['fill-down', null, null, null, null, 'rs:fill-down'],
             ['fit', 10, null, null, null, 'rs:fit:10'],
             ['fit', 0, null, null, null, 'rs:fit:0'],
             ['fill', 10, 20, null, null, 'rs:fill:10:20'],
+            ['fill-down', 10, 20, null, null, 'rs:fill-down:10:20'],
             ['fit', 10, 0, null, true, 'rs:fit:10:0::1'],
             ['fit', 10, 20, null, true, 'rs:fit:10:20::1'],
             ['fill', 10, 20, false, true, 'rs:fill:10:20:0:1'],
+            ['fill-down', 10, 20, false, true, 'rs:fill-down:10:20:0:1'],
         ];
     }
 

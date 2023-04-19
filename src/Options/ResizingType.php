@@ -11,10 +11,18 @@ final class ResizingType extends Option
     public const
         FIT = 'fit',
         FILL = 'fill',
+        FILL_DOWN = 'fill-down',
+        FORCE = 'force',
         AUTO = 'auto'
     ;
 
-    private const TYPES = [self::FIT, self::FILL, self::AUTO];
+    private const TYPES = [
+        self::FIT,
+        self::FILL,
+        self::FILL_DOWN,
+        self::FORCE,
+        self::AUTO,
+    ];
 
     /**
      * @var string
