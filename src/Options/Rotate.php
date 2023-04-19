@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Rotate extends Option
+final class Rotate extends AbstractOption
 {
     /**
      * @var int

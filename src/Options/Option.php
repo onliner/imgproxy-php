@@ -4,36 +4,40 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-abstract class Option
+final class Option extends AbstractOption
 {
     /**
-     * @return string
+     * @var string
      */
-    abstract public function name(): string;
+    private $name;
+    /**
+     * @var array<string, mixed>
+     */
+    private $data;
 
     /**
-     * @return array<mixed>
+     * @param string $name
+     * @param array<mixed> $data
      */
-    abstract public function data(): array;
-
-    /**
-     * @return string
-     */
-    public function value(): string
+    public function __construct(string $name, array $data = [])
     {
-        $data = $this->data();
-
-        array_unshift($data, $this->name());
-
-        // Remove empty options from end.
-        return rtrim(implode(':', $data), ':');
+        $this->name = $name;
+        $this->data = $data;
     }
 
     /**
-     * @return string
+     * @inheritDoc
      */
-    public function __toString(): string
+    public function name(): string
     {
-        return $this->value();
+        return $this->name;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function data(): array
+    {
+        return $this->data;
     }
 }

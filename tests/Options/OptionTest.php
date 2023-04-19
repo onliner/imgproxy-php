@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use PHPUnit\Framework\TestCase;
 
-class RawOptionTest extends TestCase
+class OptionTest extends TestCase
 {
     /**
      * @param string $value
@@ -17,7 +17,7 @@ class RawOptionTest extends TestCase
      */
     public function testCreate(string $value, array $data, string $expected): void
     {
-        $opt = new RawOption($value, $data);
+        $opt = new Option($value, $data);
         $this->assertSame($expected, (string) $opt);
     }
 

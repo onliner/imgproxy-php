@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Preset extends Option
+final class Preset extends AbstractOption
 {
     /**
      * @var string[]

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class StripColorProfile extends Option
+final class StripColorProfile extends AbstractOption
 {
     /**
      * @var bool

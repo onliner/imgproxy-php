@@ -7,7 +7,7 @@ namespace Onliner\ImgProxy\Options;
 use InvalidArgumentException;
 use Onliner\ImgProxy\Support\Color;
 
-final class Trim extends Option
+final class Trim extends AbstractOption
 {
     /**
      * @var float

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class FormatQuality extends Option
+final class FormatQuality extends AbstractOption
 {
     /**
      * @var array[]

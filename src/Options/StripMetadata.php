@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class StripMetadata extends Option
+final class StripMetadata extends AbstractOption
 {
     /**
      * @var bool

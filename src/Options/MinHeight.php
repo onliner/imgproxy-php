@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class MinHeight extends Option
+final class MinHeight extends AbstractOption
 {
     /**
      * @var Height

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends Option
+final class AutoRotate extends AbstractOption
 {
     /**
      * @var bool

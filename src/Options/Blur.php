@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Blur extends Option
+final class Blur extends AbstractOption
 {
     /**
      * @var float

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class MinWidth extends Option
+final class MinWidth extends AbstractOption
 {
     /**
      * @var Width

@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Sharpen extends Option
+final class Sharpen extends AbstractOption
 {
     /**
      * @var float

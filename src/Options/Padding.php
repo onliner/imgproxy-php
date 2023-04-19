@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Padding extends Option
+final class Padding extends AbstractOption
 {
     /**
      * @var int|null

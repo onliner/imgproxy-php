@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Crop extends Option
+final class Crop extends AbstractOption
 {
     /**
      * @var Width

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Expires extends Option
+final class Expires extends AbstractOption
 {
     /**
      * @var int

@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Dpr extends Option
+final class Dpr extends AbstractOption
 {
     /**
      * @var int

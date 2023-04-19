@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class EnforceThumbnail extends Option
+final class EnforceThumbnail extends AbstractOption
 {
     /**
      * @var string|null $format

@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class ResizingType extends Option
+final class ResizingType extends AbstractOption
 {
     public const
         FIT = 'fit',

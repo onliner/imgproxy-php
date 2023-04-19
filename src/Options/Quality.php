@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Quality extends Option
+final class Quality extends AbstractOption
 {
     /**
      * @var int

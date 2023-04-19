@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class KeepCopyright extends Option
+final class KeepCopyright extends AbstractOption
 {
     /**
      * @var bool

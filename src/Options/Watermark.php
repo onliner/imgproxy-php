@@ -7,7 +7,7 @@ namespace Onliner\ImgProxy\Options;
 use InvalidArgumentException;
 use Onliner\ImgProxy\Support\GravityType;
 
-final class Watermark extends Option
+final class Watermark extends AbstractOption
 {
     private const REPLICATE_POSITION = 're';
 

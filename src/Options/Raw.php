@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Raw extends Option
+final class Raw extends AbstractOption
 {
     /**
      * @var bool

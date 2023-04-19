@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class ReturnAttachment extends Option
+final class ReturnAttachment extends AbstractOption
 {
     /**
      * @var bool

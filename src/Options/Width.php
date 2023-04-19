@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Width extends Option
+final class Width extends AbstractOption
 {
     /**
      * @var int

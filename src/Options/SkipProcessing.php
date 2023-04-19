@@ -6,7 +6,7 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class SkipProcessing extends Option
+final class SkipProcessing extends AbstractOption
 {
     /**
      * @var string[]

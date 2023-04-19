@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Resize extends Option
+final class Resize extends AbstractOption
 {
     /**
      * @var ResizingType

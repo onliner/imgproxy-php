@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy;
 
-use Onliner\ImgProxy\Options\Option;
+use Onliner\ImgProxy\Options\AbstractOption;
 use Onliner\ImgProxy\Support\ImageFormat;
 use Onliner\ImgProxy\Support\UrlSigner;
 
@@ -25,7 +25,7 @@ class UrlBuilder
      */
     private $splitSize = 16;
     /**
-     * @var array<Option>
+     * @var array<AbstractOption>
      */
     private $options = [];
 
@@ -49,7 +49,7 @@ class UrlBuilder
     }
 
     /**
-     * @return array<Option>
+     * @return array<AbstractOption>
      */
     public function options(): array
     {
@@ -57,11 +57,11 @@ class UrlBuilder
     }
 
     /**
-     * @param Option ...$options
+     * @param AbstractOption ...$options
      *
      * @return $this
      */
-    public function with(Option ...$options): self
+    public function with(AbstractOption ...$options): self
     {
         $self = clone $this;
         $self->options = array_merge($this->options, $options);

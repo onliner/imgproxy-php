@@ -7,7 +7,7 @@ namespace Onliner\ImgProxy\Options;
 use InvalidArgumentException;
 use Onliner\ImgProxy\Support\GravityType;
 
-final class Gravity extends Option
+final class Gravity extends AbstractOption
 {
     /**
      * @var GravityType

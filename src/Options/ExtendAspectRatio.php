@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class ExtendAspectRatio extends Option
+final class ExtendAspectRatio extends AbstractOption
 {
     /**
      * @var Extend
