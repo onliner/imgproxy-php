@@ -16,11 +16,17 @@ final class Expires extends Option
         $this->timestamp = $timestamp;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function name(): string
     {
         return 'exp';
     }
 
+    /**
+     * @inheritDoc
+     */
     public function data(): array
     {
         return [
