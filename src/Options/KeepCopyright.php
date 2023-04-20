@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends AbstractOption
+final class KeepCopyright extends AbstractOption
 {
-    private bool $rotate;
+    private bool $keep;
 
-    public function __construct(bool $rotate = true)
+    public function __construct(bool $keep = true)
     {
-        $this->rotate = $rotate;
+        $this->keep = $keep;
     }
 
     /**
@@ -18,7 +18,7 @@ final class AutoRotate extends AbstractOption
      */
     public function name(): string
     {
-        return 'ar';
+        return 'kcr';
     }
 
     /**
@@ -27,7 +27,7 @@ final class AutoRotate extends AbstractOption
     public function data(): array
     {
         return [
-            (int) $this->rotate,
+            (int) $this->keep,
         ];
     }
 }

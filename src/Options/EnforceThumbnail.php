@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends AbstractOption
+final class EnforceThumbnail extends AbstractOption
 {
-    private bool $rotate;
+    private ?string $format;
 
-    public function __construct(bool $rotate = true)
+    public function __construct(?string $format = null)
     {
-        $this->rotate = $rotate;
+        $this->format = $format;
     }
 
     /**
@@ -18,7 +18,7 @@ final class AutoRotate extends AbstractOption
      */
     public function name(): string
     {
-        return 'ar';
+        return 'eth';
     }
 
     /**
@@ -27,7 +27,7 @@ final class AutoRotate extends AbstractOption
     public function data(): array
     {
         return [
-            (int) $this->rotate,
+            $this->format ?: true,
         ];
     }
 }

@@ -36,10 +36,7 @@ class GravityType
         self::FOCUS_POINT,
     ];
 
-    /**
-     * @var string
-     */
-    private $type;
+    private string $type;
 
     /**
      * @param string $type
@@ -53,9 +50,6 @@ class GravityType
         $this->type = $type;
     }
 
-    /**
-     * @return string
-     */
     public function value(): string
     {
         return $this->type;

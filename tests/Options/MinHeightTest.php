@@ -6,26 +6,26 @@ namespace Onliner\ImgProxy\Options;
 
 use PHPUnit\Framework\TestCase;
 
-class ResizingTypeTest extends TestCase
+class MinHeightTest extends TestCase
 {
     /**
      * @dataProvider validData
      */
-    public function testCreate(string $type, string $expected): void
+    public function testCreate(int $height, string $expected): void
     {
-        $opt = new ResizingType($type);
+        $opt = new MinHeight($height);
         $this->assertSame($expected, (string) $opt);
     }
 
     /**
      * @dataProvider invalidData
      */
-    public function testCreateFail(string $type): void
+    public function testCreateFail(int $height): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage("Invalid resizing type: $type");
+        $this->expectExceptionMessage("Invalid height: $height");
 
-        new ResizingType($type);
+        new MinHeight($height);
     }
 
     /**
@@ -34,11 +34,8 @@ class ResizingTypeTest extends TestCase
     public function validData(): array
     {
         return [
-            ['fit', 'rt:fit'],
-            ['fill', 'rt:fill'],
-            ['fill-down', 'rt:fill-down'],
-            ['force', 'rt:force'],
-            ['auto', 'rt:auto'],
+            [0, 'mh:0'],
+            [150, 'mh:150'],
         ];
     }
 
@@ -48,8 +45,8 @@ class ResizingTypeTest extends TestCase
     public function invalidData(): array
     {
         return [
-            ['foo'],
-            ['bar'],
+            [-1],
+            [-150],
         ];
     }
 }

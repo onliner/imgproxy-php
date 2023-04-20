@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class CacheBuster extends Option
+final class CacheBuster extends AbstractOption
 {
-    /**
-     * @var string
-     */
-    private $value;
+    private string $value;
 
     public function __construct(string $value)
     {

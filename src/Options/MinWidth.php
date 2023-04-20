@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends AbstractOption
+final class MinWidth extends AbstractOption
 {
-    private bool $rotate;
+    private Width $width;
 
-    public function __construct(bool $rotate = true)
+    public function __construct(int $width)
     {
-        $this->rotate = $rotate;
+        $this->width = new Width($width);
     }
 
     /**
@@ -18,7 +18,7 @@ final class AutoRotate extends AbstractOption
      */
     public function name(): string
     {
-        return 'ar';
+        return 'mw';
     }
 
     /**
@@ -26,8 +26,6 @@ final class AutoRotate extends AbstractOption
      */
     public function data(): array
     {
-        return [
-            (int) $this->rotate,
-        ];
+        return $this->width->data();
     }
 }

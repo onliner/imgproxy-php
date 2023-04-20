@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy;
 
-use Onliner\ImgProxy\Options\Option;
+use Onliner\ImgProxy\Options\AbstractOption;
 use Onliner\ImgProxy\Support\ImageFormat;
 use Onliner\ImgProxy\Support\UrlSigner;
 
@@ -12,27 +12,18 @@ class UrlBuilder
 {
     private const INSECURE_SIGN = 'insecure';
 
+    private ?UrlSigner $signer;
+    private bool $encoded = true;
+    private int $splitSize = 16;
     /**
-     * @var UrlSigner|null
+     * @var array<AbstractOption>
      */
-    private $signer;
-    /**
-     * @var bool
-     */
-    private $encoded = true;
-    /**
-     * @var int
-     */
-    private $splitSize = 16;
-    /**
-     * @var array<Option>
-     */
-    private $options = [];
+    private array $options = [];
 
     /**
      * @param UrlSigner|null $signer
      */
-    public function __construct(UrlSigner $signer = null)
+    public function __construct(?UrlSigner $signer = null)
     {
         $this->signer = $signer;
     }
@@ -49,7 +40,7 @@ class UrlBuilder
     }
 
     /**
-     * @return array<Option>
+     * @return array<AbstractOption>
      */
     public function options(): array
     {
@@ -57,11 +48,11 @@ class UrlBuilder
     }
 
     /**
-     * @param Option ...$options
+     * @param AbstractOption ...$options
      *
      * @return $this
      */
-    public function with(Option ...$options): self
+    public function with(AbstractOption ...$options): self
     {
         $self = clone $this;
         $self->options = array_merge($this->options, $options);
@@ -101,7 +92,7 @@ class UrlBuilder
      *
      * @return string
      */
-    public function url(string $src, string $extension = null): string
+    public function url(string $src, ?string $extension = null): string
     {
         $format = $extension ? new ImageFormat($extension) : null;
 

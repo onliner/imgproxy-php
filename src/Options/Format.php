@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Format extends Option
+final class Format extends AbstractOption
 {
-    /**
-     * @var string
-     */
-    private $extension;
+    private string $extension;
 
     public function __construct(string $extension)
     {

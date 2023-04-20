@@ -4,23 +4,17 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Resize extends Option
+final class Resize extends AbstractOption
 {
-    /**
-     * @var ResizingType
-     */
-    private $type;
-    /**
-     * @var Size|null
-     */
-    private $size;
+    private ResizingType $type;
+    private ?Size $size = null;
 
     public function __construct(
         string $type,
-        int $width = null,
-        int $height = null,
-        bool $enlarge = null,
-        bool $extend = null
+        ?int $width = null,
+        ?int $height = null,
+        ?bool $enlarge = null,
+        ?bool $extend = null
     ) {
         $this->type = new ResizingType($type);
 

@@ -7,37 +7,22 @@ namespace Onliner\ImgProxy\Options;
 use InvalidArgumentException;
 use Onliner\ImgProxy\Support\GravityType;
 
-final class Watermark extends Option
+final class Watermark extends AbstractOption
 {
     private const REPLICATE_POSITION = 're';
 
-    /**
-     * @var float
-     */
-    private $opacity;
-    /**
-     * @var string|null
-     */
-    private $position;
-    /**
-     * @var int|null
-     */
-    private $x;
-    /**
-     * @var int|null
-     */
-    private $y;
-    /**
-     * @var float|null
-     */
-    private $scale;
+    private float $opacity;
+    private ?string $position;
+    private ?int $x;
+    private ?int $y;
+    private ?float $scale;
 
     public function __construct(
         float $opacity,
-        string $position = null,
-        int $x = null,
-        int $y = null,
-        float $scale = null
+        ?string $position = null,
+        ?int $x = null,
+        ?int $y = null,
+        ?float $scale = null
     ) {
         if ($opacity < 0 || $opacity > 1) {
             throw new InvalidArgumentException(sprintf('Invalid watermark opacity: %s', $opacity));

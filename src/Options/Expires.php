@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends AbstractOption
+final class Expires extends AbstractOption
 {
-    private bool $rotate;
+    private int $timestamp;
 
-    public function __construct(bool $rotate = true)
+    public function __construct(int $timestamp)
     {
-        $this->rotate = $rotate;
+        $this->timestamp = $timestamp;
     }
 
     /**
@@ -18,7 +18,7 @@ final class AutoRotate extends AbstractOption
      */
     public function name(): string
     {
-        return 'ar';
+        return 'exp';
     }
 
     /**
@@ -27,7 +27,7 @@ final class AutoRotate extends AbstractOption
     public function data(): array
     {
         return [
-            (int) $this->rotate,
+            $this->timestamp,
         ];
     }
 }

@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class MaxBytes extends Option
+final class MaxBytes extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $bytes;
+    private int $bytes;
 
     public function __construct(int $bytes)
     {

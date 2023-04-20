@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Height extends Option
+final class Height extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $height;
+    private int $height;
 
     public function __construct(int $height)
     {

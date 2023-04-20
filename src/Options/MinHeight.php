@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class AutoRotate extends AbstractOption
+final class MinHeight extends AbstractOption
 {
-    private bool $rotate;
+    private Height $height;
 
-    public function __construct(bool $rotate = true)
+    public function __construct(int $height)
     {
-        $this->rotate = $rotate;
+        $this->height = new Height($height);
     }
 
     /**
@@ -18,7 +18,7 @@ final class AutoRotate extends AbstractOption
      */
     public function name(): string
     {
-        return 'ar';
+        return 'mh';
     }
 
     /**
@@ -26,8 +26,6 @@ final class AutoRotate extends AbstractOption
      */
     public function data(): array
     {
-        return [
-            (int) $this->rotate,
-        ];
+        return $this->height->data();
     }
 }

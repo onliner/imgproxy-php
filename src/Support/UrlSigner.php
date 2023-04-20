@@ -6,14 +6,8 @@ namespace Onliner\ImgProxy\Support;
 
 class UrlSigner
 {
-    /**
-     * @var string
-     */
-    private $salt;
-    /**
-     * @var string
-     */
-    private $key;
+    private string $salt;
+    private string $key;
 
     public function __construct(string $key, string $salt)
     {

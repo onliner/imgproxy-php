@@ -4,22 +4,13 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Crop extends Option
+final class Crop extends AbstractOption
 {
-    /**
-     * @var Width
-     */
-    private $width;
-    /**
-     * @var Height
-     */
-    private $height;
-    /**
-     * @var Gravity|null
-     */
-    private $gravity;
+    private Width $width;
+    private Height $height;
+    private ?Gravity $gravity = null;
 
-    public function __construct(int $width, int $height, string $gravity = null)
+    public function __construct(int $width, int $height, ?string $gravity = null)
     {
         $this->width = new Width($width);
         $this->height = new Height($height);

@@ -7,27 +7,18 @@ namespace Onliner\ImgProxy\Options;
 use InvalidArgumentException;
 use Onliner\ImgProxy\Support\GravityType;
 
-final class Gravity extends Option
+final class Gravity extends AbstractOption
 {
-    /**
-     * @var GravityType
-     */
-    private $type;
-    /**
-     * @var float|null
-     */
-    private $x;
-    /**
-     * @var float|null
-     */
-    private $y;
+    private GravityType $type;
+    private ?float $x;
+    private ?float $y;
 
     /**
      * @param string $type
      * @param float|null $x
      * @param float|null $y
      */
-    public function __construct(string $type, float $x = null, float $y = null)
+    public function __construct(string $type, ?float $x = null, ?float $y = null)
     {
         $this->type = new GravityType($type);
 

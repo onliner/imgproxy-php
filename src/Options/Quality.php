@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 use InvalidArgumentException;
 
-final class Quality extends Option
+final class Quality extends AbstractOption
 {
-    /**
-     * @var int
-     */
-    private $quality;
+    private int $quality;
 
     public function __construct(int $quality)
     {
