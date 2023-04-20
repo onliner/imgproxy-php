@@ -22,12 +22,20 @@ class FormatQualityTest extends TestCase
     /**
      * @dataProvider invalidData
      */
-    public function testCreateFail(int $quality): void
+    public function testCreateFailInvalidQuality(int $quality): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage("Invalid quality: $quality");
 
         new FormatQuality(['png' => $quality]);
+    }
+
+    public function testCreateFailEmptyOptions(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('At least one format quality must be set');
+
+        new FormatQuality([]);
     }
 
     /**

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
+use InvalidArgumentException;
+
 final class FormatQuality extends AbstractOption
 {
     /**
@@ -19,6 +21,10 @@ final class FormatQuality extends AbstractOption
         foreach ($options as $format => $quality) {
             $data = (new Quality($quality))->data();
             $this->options[] = [$format, ...$data];
+        }
+
+        if (empty($this->options)) {
+            throw new InvalidArgumentException('At least one format quality must be set');
         }
     }
 
