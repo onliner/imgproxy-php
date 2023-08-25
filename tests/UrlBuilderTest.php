@@ -112,7 +112,7 @@ class UrlBuilderTest extends TestCase
                     new ResizingType('fit'),
                 ],
                 'plain' => '/0c-LLep4C-7PBda91FC_d5nEJpyyGH1qzNuifVFG32k/w:300/h:400/rt:fit/plain/http://example.com/image.jpg',
-                'encoded' => '/hWXG9tmSiWjjyjTZZtLo5Ty-Zs4WNzd76pvvjpCD28c/w:300/h:400/rt:fit/aHR0cDovL2V4YW1w/bGUuY29tL2ltYWdl/LmpwZw',
+                'encoded' => '/0pEYejprWvTcn8ZeJzbHU91zCGFpWjOHMaWhY57aISs/w:300/h:400/rt:fit/aHR0cDovL2V4YW1w/bGUuY29tL2ltYWdl/LmpwZw.jpg',
             ],
         ];
     }
@@ -159,7 +159,7 @@ class UrlBuilderTest extends TestCase
                     new ResizingType('fit'),
                 ],
                 'plain' => '/insecure/w:300/h:400/rt:fit/plain/http://example.com/image.jpg',
-                'encoded' => '/insecure/w:300/h:400/rt:fit/aHR0cDovL2V4YW1w/bGUuY29tL2ltYWdl/LmpwZw',
+                'encoded' => '/insecure/w:300/h:400/rt:fit/aHR0cDovL2V4YW1w/bGUuY29tL2ltYWdl/LmpwZw.jpg',
             ],
         ];
     }

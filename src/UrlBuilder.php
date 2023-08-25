@@ -123,7 +123,7 @@ class UrlBuilder
         }
 
         $extension = null;
-        if ($format && !$format->isEquals($this->extension($src))) {
+        if ($format && ($this->encoded || !$format->isEquals($this->extension($src)))) {
             $extension = $format->value();
         }
 
