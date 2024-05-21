@@ -16,13 +16,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require onliner/imgproxy-php:^2.0
+composer require onliner/imgproxy-php:^0.2
 ```
 
 or add this code line to the `require` section of your `composer.json` file:
 
 ```
-"onliner/imgproxy-php": "^2.0"
+"onliner/imgproxy-php": "^0.2"
 ```
 
 Usage
