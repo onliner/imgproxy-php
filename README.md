@@ -16,13 +16,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require onliner/imgproxy-php:^0.1
+composer require onliner/imgproxy-php:^2.0
 ```
 
 or add this code line to the `require` section of your `composer.json` file:
 
 ```
-"onliner/imgproxy-php": "^0.1"
+"onliner/imgproxy-php": "^2.0"
 ```
 
 Usage
@@ -59,7 +59,7 @@ Released under the [MIT license](LICENSE).
 [version-link]:     https://packagist.org/packages/onliner/imgproxy-php
 [downloads-link]:   https://packagist.org/packages/onliner/imgproxy-php
 [downloads-badge]:  https://poser.pugx.org/onliner/imgproxy-php/downloads.png
-[php-badge]:        https://img.shields.io/badge/php-7.2+-brightgreen.svg
+[php-badge]:        https://img.shields.io/badge/php-8.0+-brightgreen.svg
 [php-link]:         https://www.php.net/
 [license-badge]:    https://img.shields.io/badge/license-MIT-brightgreen.svg
 [build-link]:       https://github.com/onliner/imgproxy-php/actions?workflow=test
