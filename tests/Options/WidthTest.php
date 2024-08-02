@@ -14,7 +14,9 @@ class WidthTest extends TestCase
     public function testCreate(int $width, string $expected): void
     {
         $opt = new Width($width);
+
         $this->assertSame($expected, (string) $opt);
+        $this->assertEquals($opt, eval('return '.var_export($opt, true).';'));
     }
 
     /**

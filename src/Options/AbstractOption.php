@@ -4,8 +4,31 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-abstract class AbstractOption
+use ReflectionClass;
+use Stringable;
+
+abstract class AbstractOption implements Stringable
 {
+    /**
+     * @param array<string, mixed> $data
+     *
+     * @return static
+     */
+    public static function __set_state(array $data): static
+    {
+        $class = new ReflectionClass(static::class);
+        $self = $class->newInstanceWithoutConstructor();
+
+        $assigner = function () use ($self, $data) {
+            foreach ($data as $key => $value) {
+                $self->{$key} = $value;
+            }
+        };
+        $assigner->bindTo($self, static::class)();
+
+        return $self;
+    }
+
     /**
      * @return string
      */

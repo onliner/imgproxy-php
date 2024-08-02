@@ -28,6 +28,16 @@ class ImageFormat
     }
 
     /**
+     * @param array<string, mixed> $data
+     *
+     * @return self
+     */
+    public static function __set_state(array $data): self
+    {
+        return new self(...$data);
+    }
+
+    /**
      * @param string $value
      *
      * @return bool
