@@ -62,6 +62,7 @@ class CropTest extends TestCase
             [100, 0, 'ce', 'c:100:0:ce'],
             [100, 200, 'ce', 'c:100:200:ce'],
             [100, 200, 'ce:0:0', 'c:100:200:ce:0:0'],
+            [100, 200, 'ce:200:250', 'c:100:200:ce:200:250'],
         ];
     }
 
@@ -85,8 +86,8 @@ class CropTest extends TestCase
             ['foo', 'Invalid gravity: foo'],
             ['ce:bar:0', 'Gravity X should be numeric'],
             ['ce:0:baz', 'Gravity Y should be numeric'],
-            ['ce:100:0', 'Invalid gravity X: 100'],
-            ['ce:0:500', 'Invalid gravity Y: 500'],
+            ['ce:-100:0', 'Invalid gravity X: -100'],
+            ['ce:0:-500', 'Invalid gravity Y: -500'],
         ];
     }
 }
