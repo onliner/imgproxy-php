@@ -50,6 +50,16 @@ class GravityType
         $this->type = $type;
     }
 
+    /**
+     * @param array<string, mixed> $data
+     *
+     * @return self
+     */
+    public static function __set_state(array $data): self
+    {
+        return new self(...$data);
+    }
+
     public function value(): string
     {
         return $this->type;

@@ -14,7 +14,9 @@ class ExtendTest extends TestCase
     public function testCreate(bool $extend, ?string $gravity, string $expected): void
     {
         $opt = new Extend($extend, $gravity);
+
         $this->assertSame($expected, (string) $opt);
+        $this->assertEquals($opt, eval('return '.var_export($opt, true).';'));
     }
 
     public function testCreateDefault(): void

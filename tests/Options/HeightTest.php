@@ -14,7 +14,9 @@ class HeightTest extends TestCase
     public function testCreate(int $height, string $expected): void
     {
         $opt = new Height($height);
+
         $this->assertSame($expected, (string) $opt);
+        $this->assertEquals($opt, eval('return '.var_export($opt, true).';'));
     }
 
     /**
