@@ -58,7 +58,7 @@ Released under the [MIT license](LICENSE).
 [version-badge]:    https://img.shields.io/packagist/v/onliner/imgproxy-php.svg
 [version-link]:     https://packagist.org/packages/onliner/imgproxy-php
 [downloads-link]:   https://packagist.org/packages/onliner/imgproxy-php
-[downloads-badge]:  https://poser.pugx.org/onliner/imgproxy-php/downloads.png
+[downloads-badge]:  https://poser.pugx.org/onliner/imgproxy-php/downloads.svg
 [php-badge]:        https://img.shields.io/badge/php-8.0+-brightgreen.svg
 [php-link]:         https://www.php.net/
 [license-badge]:    https://img.shields.io/badge/license-MIT-brightgreen.svg
