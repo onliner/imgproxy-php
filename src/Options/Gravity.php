@@ -22,11 +22,11 @@ final class Gravity extends AbstractOption
     {
         $this->type = new GravityType($type);
 
-        if ($x < 0 || $x > 1) {
+        if ($x < 0) {
             throw new InvalidArgumentException(sprintf('Invalid gravity X: %s', $x));
         }
 
-        if ($y < 0 || $y > 1) {
+        if ($y < 0) {
             throw new InvalidArgumentException(sprintf('Invalid gravity Y: %s', $y));
         }
 

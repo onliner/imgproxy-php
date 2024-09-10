@@ -86,6 +86,7 @@ class GravityTest extends TestCase
             ['fp', 0.5, null, 'g:fp:0.5'],
             ['fp', null, 0.5, 'g:fp::0.5'],
             ['fp', 0.5, 0.7, 'g:fp:0.5:0.7'],
+            ['fp', 200, 250, 'g:fp:200:250'],
         ];
     }
 
@@ -99,6 +100,7 @@ class GravityTest extends TestCase
             ['ce:0.5', 'g:ce:0.5'],
             ['ce:0:0', 'g:ce:0:0'],
             ['ce:0.1:0.5', 'g:ce:0.1:0.5'],
+            ['ce:200:250', 'g:ce:200:250'],
         ];
     }
 
@@ -131,6 +133,7 @@ class GravityTest extends TestCase
     public function invalidGravityOffset(): array
     {
         return [
+            [-100],
             [-1],
             [-1.01],
         ];

@@ -44,6 +44,7 @@ class ExtendAspectRatioTest extends TestCase
             [false, null, 'exar:0'],
             [true, 'ce', 'exar:1:ce'],
             [false, 'ce:0:0', 'exar:0:ce:0:0'],
+            [false, 'ce:200:250', 'exar:0:ce:200:250'],
         ];
     }
 
@@ -56,8 +57,8 @@ class ExtendAspectRatioTest extends TestCase
             ['foo', 'Invalid gravity: foo'],
             ['ce:bar:0', 'Gravity X should be numeric'],
             ['ce:0:baz', 'Gravity Y should be numeric'],
-            ['ce:100:0', 'Invalid gravity X: 100'],
-            ['ce:0:500', 'Invalid gravity Y: 500'],
+            ['ce:-100:0', 'Invalid gravity X: -100'],
+            ['ce:0:-500', 'Invalid gravity Y: -500'],
         ];
     }
 }
