@@ -10,14 +10,11 @@ final class Crop extends AbstractOption
     private Height $height;
     private ?Gravity $gravity = null;
 
-    public function __construct(int $width, int $height, ?string $gravity = null)
+    public function __construct(int $width, int $height, Gravity|string|null $gravity = null)
     {
         $this->width = new Width($width);
         $this->height = new Height($height);
-
-        if ($gravity !== null) {
-            $this->gravity = Gravity::fromString($gravity);
-        }
+        $this->gravity = is_string($gravity) ? Gravity::fromString($gravity) : $gravity;
     }
 
     /**

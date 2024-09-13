@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
+use Onliner\ImgProxy\Support\GravityType;
 use PHPUnit\Framework\TestCase;
 
 class CropTest extends TestCase
@@ -11,7 +12,7 @@ class CropTest extends TestCase
     /**
      * @dataProvider validData
      */
-    public function testCreate(int $width, int $height, ?string $gravity, string $expected): void
+    public function testCreate(int $width, int $height, Gravity|string|null $gravity, string $expected): void
     {
         $opt = new Crop($width, $height, $gravity);
         $this->assertSame($expected, (string) $opt);
@@ -61,8 +62,10 @@ class CropTest extends TestCase
             [100, 200, null, 'c:100:200'],
             [100, 0, 'ce', 'c:100:0:ce'],
             [100, 200, 'ce', 'c:100:200:ce'],
+            [100, 200, new Gravity(GravityType::CENTER), 'c:100:200:ce'],
             [100, 200, 'ce:0:0', 'c:100:200:ce:0:0'],
             [100, 200, 'ce:200:250', 'c:100:200:ce:200:250'],
+            [100, 200, new Gravity(GravityType::CENTER, 200, 250), 'c:100:200:ce:200:250'],
         ];
     }
 
