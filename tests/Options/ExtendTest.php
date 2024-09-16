@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
+use Onliner\ImgProxy\Support\GravityType;
 use PHPUnit\Framework\TestCase;
 
 class ExtendTest extends TestCase
@@ -11,7 +12,7 @@ class ExtendTest extends TestCase
     /**
      * @dataProvider exampleData
      */
-    public function testCreate(bool $extend, ?string $gravity, string $expected): void
+    public function testCreate(bool $extend, Gravity|string|null $gravity, string $expected): void
     {
         $opt = new Extend($extend, $gravity);
 
@@ -45,8 +46,10 @@ class ExtendTest extends TestCase
             [true, null, 'ex:1'],
             [false, null, 'ex:0'],
             [true, 'ce', 'ex:1:ce'],
+            [true, new Gravity(GravityType::CENTER), 'ex:1:ce'],
             [false, 'ce:0:0', 'ex:0:ce:0:0'],
             [false, 'ce:200:250', 'ex:0:ce:200:250'],
+            [false, new Gravity(GravityType::CENTER, 200, 250), 'ex:0:ce:200:250'],
         ];
     }
 

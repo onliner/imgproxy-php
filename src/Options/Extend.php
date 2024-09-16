@@ -9,13 +9,10 @@ final class Extend extends AbstractOption
     private bool $extend;
     private ?Gravity $gravity = null;
 
-    public function __construct(bool $extend = true, ?string $gravity = null)
+    public function __construct(bool $extend = true, Gravity|string|null $gravity = null)
     {
         $this->extend = $extend;
-
-        if ($gravity !== null) {
-            $this->gravity = Gravity::fromString($gravity);
-        }
+        $this->gravity = is_string($gravity) ? Gravity::fromString($gravity) : $gravity;
     }
 
     /**
