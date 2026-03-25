@@ -96,8 +96,10 @@ class UrlBuilder
     {
         $format = $extension ? new ImageFormat($extension) : null;
 
-        $opt = implode('/', $this->options);
-        $path = sprintf('/%s/%s', $opt, $this->source($src, $format));
+        $path = '/' . implode('/', [
+            ...$this->options,
+            $this->source($src, $format),
+        ]);
 
         return sprintf('/%s%s', $this->signature($path), $path);
     }

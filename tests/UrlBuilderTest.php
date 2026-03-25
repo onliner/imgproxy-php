@@ -114,6 +114,13 @@ class UrlBuilderTest extends TestCase
                 'plain' => '/0c-LLep4C-7PBda91FC_d5nEJpyyGH1qzNuifVFG32k/w:300/h:400/rt:fit/plain/http://example.com/image.jpg',
                 'encoded' => '/0pEYejprWvTcn8ZeJzbHU91zCGFpWjOHMaWhY57aISs/w:300/h:400/rt:fit/aHR0cDovL2V4YW1w/bGUuY29tL2ltYWdl/LmpwZw.jpg',
             ],
+            [
+                'src' => 'local:///logos/evil_martians.png',
+                'format' => 'jpg',
+                'options' => [],
+                'plain' => '/ULisISQ1rO57bD0OFBi0sQQjngiG5hLM1G8lZNrmFnU/plain/local:///logos/evil_martians.png@jpg',
+                'encoded' => '/UXBqIs6HQ2FlcNLEcx5V0OGfuujgcBZynk0r500gf7A/bG9jYWw6Ly8vbG9n/b3MvZXZpbF9tYXJ0/aWFucy5wbmc.jpg',
+            ],
         ];
     }
 
