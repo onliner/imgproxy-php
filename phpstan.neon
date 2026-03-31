@@ -1,0 +1,7 @@
+parameters:
+    ignoreErrors:
+        - '#no value type specified in iterable type array#'
+    level: max
+    paths:
+        - src
+        - tests

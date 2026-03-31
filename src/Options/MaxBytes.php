@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class MaxBytes extends AbstractOption
 {
-    private int $bytes;
-
-    public function __construct(int $bytes)
-    {
+    public function __construct(
+        private int $bytes,
+    ) {
         if ($bytes < 0) {
             throw new InvalidArgumentException(sprintf('Invalid max bytes: %s', $bytes));
         }
-
-        $this->bytes = $bytes;
     }
 
     /**

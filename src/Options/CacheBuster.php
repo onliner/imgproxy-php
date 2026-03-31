@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class CacheBuster extends AbstractOption
 {
-    private string $value;
-
-    public function __construct(string $value)
-    {
+    public function __construct(
+        private string $value,
+    ) {
         if (empty($value)) {
             throw new InvalidArgumentException('Cache buster cannot be empty');
         }
-
-        $this->value = $value;
     }
 
     /**

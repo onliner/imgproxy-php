@@ -8,21 +8,15 @@ use InvalidArgumentException;
 
 final class Padding extends AbstractOption
 {
-    private ?int $top;
-    private ?int $right;
-    private ?int $bottom;
-    private ?int $left;
-
-    public function __construct(?int $top = null, ?int $right = null, ?int $bottom = null, ?int $left = null)
-    {
+    public function __construct(
+        private ?int $top = null,
+        private ?int $right = null,
+        private ?int $bottom = null,
+        private ?int $left = null,
+    ) {
         if (is_null($top ?? $right ?? $bottom ?? $left)) {
             throw new InvalidArgumentException('At least one dimension must be set');
         }
-
-        $this->top = $top;
-        $this->right = $right;
-        $this->bottom = $bottom;
-        $this->left = $left;
     }
 
     /**

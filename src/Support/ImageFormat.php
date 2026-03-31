@@ -28,7 +28,7 @@ class ImageFormat
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param array<string> $data
      *
      * @return self
      */

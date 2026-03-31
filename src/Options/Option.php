@@ -6,21 +6,14 @@ namespace Onliner\ImgProxy\Options;
 
 final class Option extends AbstractOption
 {
-    private string $name;
-    /**
-     * @var array<string, mixed>
-     */
-    private array $data;
-
     /**
      * @param string $name
      * @param array<string, mixed> $data
      */
-    public function __construct(string $name, array $data = [])
-    {
-        $this->name = $name;
-        $this->data = $data;
-    }
+    public function __construct(
+        private string $name,
+        private array $data = [],
+    ) {}
 
     /**
      * @inheritDoc

@@ -6,12 +6,13 @@ namespace Onliner\ImgProxy\Options;
 
 final class Extend extends AbstractOption
 {
-    private bool $extend;
-    private ?Gravity $gravity = null;
+    private ?Gravity $gravity;
 
-    public function __construct(bool $extend = true, Gravity|string|null $gravity = null)
+    public function __construct(
+        private bool $extend = true,
+        Gravity|string|null $gravity = null
+    )
     {
-        $this->extend = $extend;
         $this->gravity = is_string($gravity) ? Gravity::fromString($gravity) : $gravity;
     }
 

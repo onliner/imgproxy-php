@@ -24,15 +24,12 @@ final class ResizingType extends AbstractOption
         self::AUTO,
     ];
 
-    private string $type;
-
-    public function __construct(string $type)
-    {
+    public function __construct(
+        private string $type,
+    ) {
         if (!in_array($type, self::TYPES)) {
             throw new InvalidArgumentException(sprintf('Invalid resizing type: %s', $type));
         }
-
-        $this->type = $type;
     }
 
     /**

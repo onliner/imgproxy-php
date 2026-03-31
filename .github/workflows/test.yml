@@ -24,6 +24,10 @@ jobs:
         run: |
           composer install --no-progress
 
+      - name: Run PHPStan
+        run: |
+          make phpstan
+
       - name: Run tests
         run: |
           make test

@@ -44,9 +44,7 @@ abstract class AbstractOption implements Stringable
      */
     public function value(): string
     {
-        $data = $this->data();
-
-        array_unshift($data, $this->name());
+        $data = [$this->name(), ...$this->data()];
 
         // Remove empty options from end.
         return rtrim(implode(':', $data), ':');

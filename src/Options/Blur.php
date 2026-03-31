@@ -8,15 +8,13 @@ use InvalidArgumentException;
 
 final class Blur extends AbstractOption
 {
-    private float $sigma;
-
-    public function __construct(float $sigma)
+    public function __construct(
+        private float $sigma,
+    )
     {
         if ($sigma < 0) {
             throw new InvalidArgumentException(sprintf('Invalid blur: %s', $sigma));
         }
-
-        $this->sigma = $sigma;
     }
 
     /**

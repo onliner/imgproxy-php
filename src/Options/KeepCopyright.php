@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 final class KeepCopyright extends AbstractOption
 {
-    private bool $keep;
-
-    public function __construct(bool $keep = true)
-    {
-        $this->keep = $keep;
-    }
+    public function __construct(
+        private bool $keep = true,
+    ) {}
 
     /**
      * @inheritDoc

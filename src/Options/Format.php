@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class Format extends AbstractOption
 {
-    private string $extension;
-
-    public function __construct(string $extension)
-    {
+    public function __construct(
+        private string $extension,
+    ) {
         if (empty($extension)) {
             throw new InvalidArgumentException('Format cannot be empty');
         }
-
-        $this->extension = $extension;
     }
 
     /**

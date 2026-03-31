@@ -34,7 +34,7 @@ class Color
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param array<string> $data
      *
      * @return self
      */

@@ -10,15 +10,17 @@ use Onliner\ImgProxy\Support\GravityType;
 final class Gravity extends AbstractOption
 {
     private GravityType $type;
-    private ?float $x;
-    private ?float $y;
 
     /**
      * @param string $type
      * @param float|null $x
      * @param float|null $y
      */
-    public function __construct(string $type, ?float $x = null, ?float $y = null)
+    public function __construct(
+        string $type,
+        private ?float $x = null,
+        private ?float $y = null,
+    )
     {
         $this->type = new GravityType($type);
 
@@ -29,9 +31,6 @@ final class Gravity extends AbstractOption
         if ($y < 0) {
             throw new InvalidArgumentException(sprintf('Invalid gravity Y: %s', $y));
         }
-
-        $this->x = $x;
-        $this->y = $y;
     }
 
     /**

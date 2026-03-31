@@ -36,22 +36,19 @@ class GravityType
         self::FOCUS_POINT,
     ];
 
-    private string $type;
-
     /**
      * @param string $type
      */
-    public function __construct(string $type)
-    {
+    public function __construct(
+        private string $type,
+    ) {
         if (!in_array($type, self::TYPES)) {
             throw new InvalidArgumentException(sprintf('Invalid gravity: %s', $type));
         }
-
-        $this->type = $type;
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param array<string> $data
      *
      * @return self
      */

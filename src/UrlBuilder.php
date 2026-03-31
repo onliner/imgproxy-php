@@ -12,7 +12,6 @@ class UrlBuilder
 {
     private const INSECURE_SIGN = 'insecure';
 
-    private ?UrlSigner $signer;
     private bool $encoded = true;
     private int $splitSize = 16;
     /**
@@ -23,10 +22,9 @@ class UrlBuilder
     /**
      * @param UrlSigner|null $signer
      */
-    public function __construct(?UrlSigner $signer = null)
-    {
-        $this->signer = $signer;
-    }
+    public function __construct(
+        private ?UrlSigner $signer = null,
+    ) {}
 
     /**
      * @param string $key
@@ -50,7 +48,7 @@ class UrlBuilder
     /**
      * @param AbstractOption ...$options
      *
-     * @return $this
+     * @return self
      */
     public function with(AbstractOption ...$options): self
     {
@@ -63,7 +61,7 @@ class UrlBuilder
     /**
      * @param bool $encoded
      *
-     * @return $this
+     * @return self
      */
     public function encoded(bool $encoded): self
     {

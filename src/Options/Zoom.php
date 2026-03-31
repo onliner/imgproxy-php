@@ -8,11 +8,10 @@ use InvalidArgumentException;
 
 final class Zoom extends AbstractOption
 {
-    private float $x;
-    private ?float $y;
-
-    public function __construct(float $x, ?float $y = null)
-    {
+    public function __construct(
+        private float $x,
+        private ?float $y = null,
+    ) {
         if ($x <= 0) {
             throw new InvalidArgumentException(sprintf('Invalid zoom X value: %s', $x));
         }
@@ -20,9 +19,6 @@ final class Zoom extends AbstractOption
         if ($y !== null && $y <= 0) {
             throw new InvalidArgumentException(sprintf('Invalid zoom Y value: %s', $y));
         }
-
-        $this->x = $x;
-        $this->y = $y;
     }
 
     /**

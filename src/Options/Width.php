@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class Width extends AbstractOption
 {
-    private int $width;
-
-    public function __construct(int $width)
-    {
+    public function __construct(
+        private int $width,
+    ) {
         if ($width < 0) {
             throw new InvalidArgumentException(sprintf('Invalid width: %s', $width));
         }
-
-        $this->width = $width;
     }
 
     /**

@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class Rotate extends AbstractOption
 {
-    private int $angle;
-
-    public function __construct(int $angle)
-    {
+    public function __construct(
+        private int $angle,
+    ) {
         if ($angle < 0 || $angle % 90 !== 0) {
             throw new InvalidArgumentException(sprintf('Invalid angle: %s', $angle));
         }
-
-        $this->angle = $angle;
     }
 
     /**

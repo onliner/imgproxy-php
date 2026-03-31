@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 final class ReturnAttachment extends AbstractOption
 {
-    private bool $value;
-
-    public function __construct(bool $value = true)
-    {
-        $this->value = $value;
-    }
+    public function __construct(
+        private bool $value = true,
+    ) {}
 
     /**
      * @inheritDoc
