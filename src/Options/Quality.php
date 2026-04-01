@@ -9,11 +9,16 @@ use InvalidArgumentException;
 final class Quality extends AbstractOption
 {
     public function __construct(
-        private int $quality,
+        public int $quality,
     ) {
         if ($quality < 0 || $quality > 100) {
             throw new InvalidArgumentException(sprintf('Invalid quality: %s', $quality));
         }
+    }
+
+    public function quality(): int
+    {
+        return $this->quality;
     }
 
     /**

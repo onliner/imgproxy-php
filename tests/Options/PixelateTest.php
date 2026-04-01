@@ -29,7 +29,7 @@ class PixelateTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, string}>
      */
     public function validData(): array
     {
@@ -40,7 +40,7 @@ class PixelateTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int}>
      */
     public function invalidData(): array
     {

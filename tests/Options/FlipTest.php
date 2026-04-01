@@ -24,7 +24,7 @@ class FlipTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{bool, bool, string}>
      */
     public function exampleData(): array
     {

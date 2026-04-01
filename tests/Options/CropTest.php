@@ -52,7 +52,7 @@ class CropTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, int, string|Gravity|null, string}>
      */
     public function validData(): array
     {
@@ -70,7 +70,7 @@ class CropTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int}>
      */
     public function invalidData(): array
     {
@@ -81,7 +81,7 @@ class CropTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function invalidGravityData(): array
     {

@@ -26,7 +26,7 @@ class PaddingTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, int|null, int|null, int|null, string}>
      */
     public function validData(): array
     {

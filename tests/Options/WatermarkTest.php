@@ -56,7 +56,7 @@ class WatermarkTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{float, string|null, int|null, int|null, float|null, string}>
      */
     public function validData(): array
     {
@@ -69,7 +69,7 @@ class WatermarkTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function validPositions(): array
     {
@@ -88,7 +88,7 @@ class WatermarkTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{float}>
      */
     public function invalidOpacityData(): array
     {

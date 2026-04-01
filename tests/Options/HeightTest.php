@@ -31,7 +31,7 @@ class HeightTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, string}>
      */
     public function validData(): array
     {
@@ -42,7 +42,7 @@ class HeightTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int}>
      */
     public function invalidData(): array
     {

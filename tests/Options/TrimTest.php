@@ -40,7 +40,7 @@ class TrimTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float, string|null, bool|null, bool|null, string}>
      */
     public function validData(): array
     {
@@ -53,7 +53,7 @@ class TrimTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function invalidColorData(): array
     {
@@ -65,7 +65,7 @@ class TrimTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float}>
      */
     public function invalidThresholdData(): array
     {

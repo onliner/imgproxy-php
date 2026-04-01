@@ -29,7 +29,7 @@ class ResizingTypeTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function validData(): array
     {
@@ -43,7 +43,7 @@ class ResizingTypeTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function invalidData(): array
     {

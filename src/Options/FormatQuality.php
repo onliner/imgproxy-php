@@ -9,7 +9,7 @@ use InvalidArgumentException;
 final class FormatQuality extends AbstractOption
 {
     /**
-     * @var array[]
+     * @var list<array{string, int}>
      */
     private array $options = [];
 
@@ -18,9 +18,8 @@ final class FormatQuality extends AbstractOption
      */
     public function __construct(array $options)
     {
-        foreach ($options as $format => $quality) {
-            $data = (new Quality($quality))->data();
-            $this->options[] = [$format, ...$data];
+        foreach ($options as $format => $value) {
+            $this->options[] = [$format, (new Quality($value))->quality()];
         }
 
         if (empty($this->options)) {

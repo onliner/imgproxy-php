@@ -31,7 +31,7 @@ class BackgroundTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function validData(): array
     {
@@ -43,7 +43,7 @@ class BackgroundTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function invalidData(): array
     {

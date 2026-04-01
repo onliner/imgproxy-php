@@ -29,7 +29,7 @@ class RotateTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, string}>
      */
     public function validData(): array
     {
@@ -43,7 +43,7 @@ class RotateTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int}>
      */
     public function invalidData(): array
     {
