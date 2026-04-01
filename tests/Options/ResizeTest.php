@@ -45,7 +45,14 @@ class ResizeTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{
+     *     string,
+     *     int|null,
+     *     int|null,
+     *     bool|null,
+     *     bool|null,
+     *     string
+     * }>
      */
     public function validData(): array
     {
@@ -66,7 +73,7 @@ class ResizeTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function invalidResizingType(): array
     {

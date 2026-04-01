@@ -44,7 +44,7 @@ class ZoomTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float, int|float|null, string}>
      */
     public function validData(): array
     {
@@ -57,7 +57,7 @@ class ZoomTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float}>
      */
     public function invalidData(): array
     {

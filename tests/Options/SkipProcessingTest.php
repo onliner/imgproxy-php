@@ -29,7 +29,7 @@ class SkipProcessingTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{list<string>, string}>
      */
     public function exampleData(): array
     {

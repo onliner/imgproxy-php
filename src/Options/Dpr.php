@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class Dpr extends AbstractOption
 {
-    private int $dpr;
-
-    public function __construct(int $dpr)
-    {
+    public function __construct(
+        private int $dpr,
+    ) {
         if ($dpr <= 0) {
             throw new InvalidArgumentException(sprintf('Invalid dpr: %s', $dpr));
         }
-
-        $this->dpr = $dpr;
     }
 
     /**

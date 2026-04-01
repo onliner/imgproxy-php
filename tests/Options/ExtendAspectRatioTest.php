@@ -35,7 +35,7 @@ class ExtendAspectRatioTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{bool, string|null, string}>
      */
     public function exampleData(): array
     {
@@ -49,7 +49,7 @@ class ExtendAspectRatioTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function invalidGravityData(): array
     {

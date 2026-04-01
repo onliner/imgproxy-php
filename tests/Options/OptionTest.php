@@ -22,7 +22,7 @@ class OptionTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, list<int>, string}>
      */
     public function exampleData(): array
     {

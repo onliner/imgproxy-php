@@ -24,7 +24,7 @@ class StripColorProfileTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{bool, string}>
      */
     public function exampleData(): array
     {

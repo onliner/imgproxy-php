@@ -24,7 +24,7 @@ class EnforceThumbnailTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string|null, string}>
      */
     public function exampleData(): array
     {

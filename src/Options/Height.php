@@ -8,15 +8,12 @@ use InvalidArgumentException;
 
 final class Height extends AbstractOption
 {
-    private int $height;
-
-    public function __construct(int $height)
-    {
+    public function __construct(
+        private int $height,
+    ) {
         if ($height < 0) {
             throw new InvalidArgumentException(sprintf('Invalid height: %s', $height));
         }
-
-        $this->height = $height;
     }
 
     /**

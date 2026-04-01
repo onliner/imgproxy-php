@@ -29,7 +29,7 @@ class PresetTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{list<string>, string}>
      */
     public function validData(): array
     {

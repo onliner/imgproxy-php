@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 final class Enlarge extends AbstractOption
 {
-    private bool $enlarge;
-
-    public function __construct(bool $enlarge = true)
-    {
-        $this->enlarge = $enlarge;
-    }
+    public function __construct(
+        private bool $enlarge = true,
+    ) {}
 
     /**
      * @inheritDoc

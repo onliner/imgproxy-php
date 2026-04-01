@@ -39,7 +39,7 @@ class FormatQualityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{array<string, int>, string}>
      */
     public function validData(): array
     {
@@ -52,7 +52,7 @@ class FormatQualityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int}>
      */
     public function invalidData(): array
     {

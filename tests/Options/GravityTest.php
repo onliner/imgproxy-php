@@ -76,7 +76,7 @@ class GravityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, int|float|null, int|float|null, string}>
      */
     public function validData(): array
     {
@@ -91,7 +91,7 @@ class GravityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function validDataFromString(): array
     {
@@ -105,7 +105,7 @@ class GravityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string, string}>
      */
     public function invalidDataFromString(): array
     {
@@ -117,7 +117,7 @@ class GravityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{string}>
      */
     public function invalidGravityType(): array
     {
@@ -128,7 +128,7 @@ class GravityTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float}>
      */
     public function invalidGravityOffset(): array
     {

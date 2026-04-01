@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 final class StripColorProfile extends AbstractOption
 {
-    private bool $strip;
-
-    public function __construct(bool $strip = true)
-    {
-        $this->strip = $strip;
-    }
+    public function __construct(
+        private bool $strip = true,
+    ) {}
 
     /**
      * @inheritDoc

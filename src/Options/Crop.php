@@ -8,7 +8,7 @@ final class Crop extends AbstractOption
 {
     private Width $width;
     private Height $height;
-    private ?Gravity $gravity = null;
+    private ?Gravity $gravity;
 
     public function __construct(int $width, int $height, Gravity|string|null $gravity = null)
     {

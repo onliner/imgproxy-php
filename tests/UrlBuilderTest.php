@@ -71,7 +71,7 @@ class UrlBuilderTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array<string, mixed>>
      */
     public function signedData(): array
     {
@@ -125,7 +125,7 @@ class UrlBuilderTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array<string, mixed>>
      */
     public function unsignedData(): array
     {

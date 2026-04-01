@@ -4,27 +4,23 @@ declare(strict_types=1);
 
 namespace Onliner\ImgProxy\Options;
 
-final class Expires extends AbstractOption
+final class Flip extends AbstractOption
 {
     public function __construct(
-        private int $timestamp,
+        private bool $horizontal = false,
+        private bool $vertical = false,
     ) {}
 
-    /**
-     * @inheritDoc
-     */
     public function name(): string
     {
-        return 'exp';
+        return 'fl';
     }
 
-    /**
-     * @inheritDoc
-     */
     public function data(): array
     {
         return [
-            $this->timestamp,
+            (int) $this->horizontal,
+            (int) $this->vertical,
         ];
     }
 }

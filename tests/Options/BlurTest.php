@@ -29,7 +29,7 @@ class BlurTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float, string}>
      */
     public function validData(): array
     {
@@ -42,7 +42,7 @@ class BlurTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int|float}>
      */
     public function invalidData(): array
     {

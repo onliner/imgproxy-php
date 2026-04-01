@@ -6,28 +6,26 @@ namespace Onliner\ImgProxy\Options;
 
 use PHPUnit\Framework\TestCase;
 
-class HeightTest extends TestCase
+class PixelateTest extends TestCase
 {
     /**
      * @dataProvider validData
      */
-    public function testCreate(int $height, string $expected): void
+    public function testCreate(int $size, string $expected): void
     {
-        $opt = new Height($height);
-
+        $opt = new Pixelate($size);
         $this->assertSame($expected, (string) $opt);
-        $this->assertEquals($opt, eval('return '.var_export($opt, true).';'));
     }
 
     /**
      * @dataProvider invalidData
      */
-    public function testCreateFail(int $height): void
+    public function testCreateFail(int $size): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage("Invalid height: $height");
+        $this->expectExceptionMessage("Invalid size: $size");
 
-        new Height($height);
+        new Pixelate($size);
     }
 
     /**
@@ -36,8 +34,8 @@ class HeightTest extends TestCase
     public function validData(): array
     {
         return [
-            [0, 'h:0'],
-            [150, 'h:150'],
+            [0, 'pix:0'],
+            [10, 'pix:10'],
         ];
     }
 
@@ -48,7 +46,7 @@ class HeightTest extends TestCase
     {
         return [
             [-1],
-            [-150],
+            [-10],
         ];
     }
 }

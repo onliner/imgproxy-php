@@ -6,12 +6,9 @@ namespace Onliner\ImgProxy\Options;
 
 final class EnforceThumbnail extends AbstractOption
 {
-    private ?string $format;
-
-    public function __construct(?string $format = null)
-    {
-        $this->format = $format;
-    }
+    public function __construct(
+        private ?string $format = null,
+    ) {}
 
     /**
      * @inheritDoc

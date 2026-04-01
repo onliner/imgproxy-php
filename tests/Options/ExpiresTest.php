@@ -18,7 +18,7 @@ class ExpiresTest extends TestCase
     }
 
     /**
-     * @return array[]
+     * @return list<array{int, string}>
      */
     public function exampleData(): array
     {
